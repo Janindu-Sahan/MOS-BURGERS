@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    border-radius: 8px;
+}
+
+.navbar-brand span {
+    font-size: 1.7rem;
+    color: #222;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: #333;
+    color: #fff;
+}
+

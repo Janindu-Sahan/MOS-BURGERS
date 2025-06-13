@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    border-radius: 8px;
+}
+
+.navbar-brand span {
+    font-size: 1.7rem;
+    color: #222;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #333;
+    color: #fff;
+}
+
+
+
+/* Main Content */
+.main-content {
+    height: calc(100vh - 80px);
+
+}
+
+.left-side {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem;
+
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #333;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+
+
+}
+
+.login-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    width: fit-content;
+
+}
+
+.login-btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+.rght-side {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.burger-box {
+    width: 300px;
+    height: auto
+}

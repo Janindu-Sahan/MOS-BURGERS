@@ -1,0 +1,87 @@
+/* Match style.css for a unified look */
+
+body {
+    overflow: hidden;
+    position: relative;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff;
+      background: url('/Assets/Banner.png') center/cover no-repeat;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                url('../IMG/Banner.png') center/cover no-repeat;
+    z-index: -1;
+}
+
+/* Login Box */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    width: 350px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #222;
+}
+
+.form-control {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.login-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Optional: Style links */
+.login-link {
+    color: #333;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+}
