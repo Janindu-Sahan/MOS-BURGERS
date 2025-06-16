@@ -1,10 +1,8 @@
 body {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
-
-
 
 /* Navigation */
 .navbar {
@@ -31,6 +29,9 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
+    margin-right: 15px;
+    color: #000;
+    text-decoration: none;
 }
 
 .nav-link {
@@ -49,12 +50,46 @@ body {
     color: #fff;
 }
 
+/* Login Icon Button */
+.login-icon-btn {
+    border: 1px solid #333;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: transparent;
+    color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+}
 
+.login-icon-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.login-icon-btn::after {
+    content: 'Login';
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.login-icon-btn:hover::after {
+    opacity: 1;
+}
 
 /* Main Content */
 .main-content {
     height: calc(100vh - 80px);
-
 }
 
 .left-side {
@@ -63,7 +98,6 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 4rem;
-
 }
 
 .title {
@@ -72,8 +106,6 @@ body {
     color: #333;
     line-height: 0.9;
     margin-bottom: 2rem;
-
-
 }
 
 .login-btn {
@@ -84,7 +116,6 @@ body {
     border-radius: 25px;
     font-weight: 600;
     width: fit-content;
-
 }
 
 .login-btn:hover {
@@ -103,9 +134,6 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 20px;
-}
-
-.burger-box {
     width: 300px;
-    height: auto
+    height: auto;
 }

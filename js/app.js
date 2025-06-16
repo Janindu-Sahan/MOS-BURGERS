@@ -30,5 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 3000);
         }
     });
+    document.addEventListener('DOMContentLoaded', function () {
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
 });
 
