@@ -2,12 +2,14 @@ body {
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: #fff; /* Background White */
+    color: #222; /* Text Black */
 }
 
 /* Navigation */
 .navbar {
     padding: 1rem 0;
-    background: #fff;
+    background: #fff; /* Background White */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -22,7 +24,7 @@ body {
 
 .navbar-brand span {
     font-size: 1.7rem;
-    color: #222;
+    color: #222; /* Text Black */
     letter-spacing: 2px;
 }
 
@@ -30,12 +32,10 @@ body {
     display: flex;
     gap: 2rem;
     margin-right: 15px;
-    color: #000;
-    text-decoration: none;
 }
 
 .nav-link {
-    color: #333;
+    color: #333; /* Dark Gray */
     font-weight: 500;
     font-size: 1.1rem;
     text-decoration: none;
@@ -46,24 +46,24 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background: #333;
-    color: #fff;
+    background: #333; /* Dark Gray */
+    color: #fff; /* Background White */
 }
 
 /* Login Icon Button */
 .login-icon-btn {
-    border: 1px solid #333;
+    border: 1px solid #333; /* Dark Gray */
     border-radius: 50%;
     padding: 10px;
     background-color: transparent;
-    color: #333;
+    color: #333; /* Dark Gray */
     transition: all 0.3s ease;
     position: relative;
 }
 
 .login-icon-btn:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Dark Gray */
+    color: #fff; /* Background White */
 }
 
 .login-icon-btn::after {
@@ -72,7 +72,7 @@ body {
     top: 110%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background-color: #333; /* Dark Gray */
     color: white;
     padding: 4px 8px;
     font-size: 0.75rem;
@@ -89,51 +89,210 @@ body {
 
 /* Main Content */
 .main-content {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    padding: 2rem 4rem;
 }
 
+/* Hero Section */
 .left-side {
-    background: white;
+    background: #fff; /* Background White */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 4rem;
+    padding-left: 2rem;
 }
 
 .title {
     font-size: 4rem;
     font-weight: 900;
-    color: #333;
-    line-height: 0.9;
-    margin-bottom: 2rem;
+    color: #222; /* Text Black */
+    line-height: 1;
+    margin-bottom: 1.5rem;
 }
 
+/* Buttons */
 .login-btn {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Dark Gray */
+    color: #fff; /* Background White */
     border: none;
     padding: 1rem 2rem;
     border-radius: 25px;
     font-weight: 600;
     width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
 }
 
 .login-btn:hover {
-    background-color: #555;
-    color: white;
+    background-color: #555; /* Medium Gray */
+    color: #fff;
 }
 
-.rght-side {
-    background-color: white;
+.order-now-btn {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+}
+
+.order-now-btn:hover {
+    background-color: #ffc107;
+    color: #fff;
+    border:2px solid #000; 
+}
+
+
+/* Right Side */
+.right-side {
+    background-color: #fff; /* Background White */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .burger-box {
-    background: white;
+    background: #fff; /* Background White */
     padding: 2rem;
     border-radius: 20px;
     width: 300px;
     height: auto;
+    box-shadow: 0 4px 8px rgba(51, 51, 51, 0.1); /* subtle shadow */
+}
+
+/* Featured Burgers Section */
+.featured-burgers {
+    margin-top: 4rem;
+}
+
+.featured-burgers h2 {
+    color: #222; /* Text Black */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.featured-burgers .burger-card {
+    background: #fff;
+    border: 1px solid #ddd; /* Light Gray */
+    border-radius: 15px;
+    padding: 1rem;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+.featured-burgers .burger-card:hover {
+    box-shadow: 0 8px 16px rgba(51, 51, 51, 0.15);
+}
+
+.featured-burgers .burger-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.featured-burgers .burger-card h5 {
+    margin-bottom: 0.5rem;
+    color: #333; /* Dark Gray */
+}
+
+.featured-burgers .burger-card p {
+    font-size: 0.9rem;
+    color: #555; /* Medium Gray */
+    margin-bottom: 0.5rem;
+}
+
+.featured-burgers .burger-card strong {
+    color: #333; /* Dark Gray */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f9f9f9; /* very light gray alternative to white */
+    padding: 3rem 1rem;
+    border-radius: 20px;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: #222; /* Text Black */
+    margin-bottom: 2rem;
+}
+
+.why-choose-us .feature-item {
+    margin-bottom: 2rem;
+    color: #333; /* Dark Gray */
+}
+
+.why-choose-us i {
+    color: #333; /* Dark Gray */
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+/* Special Offers Section */
+.special-offers {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #222; /* Text Black */
+}
+
+.special-offers p {
+    font-size: 1.1rem;
+}
+
+.special-offers p.fs-6 {
+    color: #555; /* Medium Gray */
+}
+
+/* Locations & Hours Section */
+.locations {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    color: #222; /* Text Black */
+}
+
+.locations h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.locations .location {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.locations .location h5 {
+    margin-bottom: 0.5rem;
+    color: #333; /* Dark Gray */
+}
+
+.locations .location p {
+    margin-bottom: 0.25rem;
+    color: #555; /* Medium Gray */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem 2rem;
+    }
+
+    .left-side {
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    .right-side {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
 }

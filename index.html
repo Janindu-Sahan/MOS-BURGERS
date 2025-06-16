@@ -2,17 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MOS Burger</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="./Assets/mos burger ai.jpg" type="Logo">
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="./Assets/mos burger ai.jpg" type="Logo" />
 </head>
 
 <body>
@@ -20,43 +17,158 @@
     <nav class="navbar navbar-light bg-white">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="navbar-brand d-flex align-items-center">
-                <img src="/Assets/mos burger ai.jpg" alt="Logo" height="50">
+                <img src="/Assets/mos burger ai.jpg" alt="Logo" height="50" />
                 <span class="ms-2 fw-bold">MOS BURGER</span>
             </div>
 
             <div class="d-flex align-items-center">
                 <div class="nav-links me-3">
-                    <a href="./index.html" class="nav-link d-inline-block">Home</a>
-                    <a href="./Menu.html" class="nav-link d-inline-block">Menu</a>
+                    <a href="./index.html" class="nav-link d-inline-block active">Home</a>
+                    <a href="./login.html" class="nav-link d-inline-block">Order</a>
                     <a href="./About.html" class="nav-link d-inline-block">About</a>
                     <a href="./Contact.html" class="nav-link d-inline-block">Contact</a>
                 </div>
                 <a href="/login.html" class="login-icon-btn">
                     <i class="fa-solid fa-user fa-lg"></i>
                 </a>
-
-                </a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container-fluid main-content">
-        <div class="row h-100">
-            <div class="col-6 left-side">
-                <h1 class="title">MOS BURGER</h1>
-
+    <main class="container my-5">
+        <!-- Hero Section -->
+        <section class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h1 class="display-3 fw-bold">Welcome to MOS Burgers</h1>
+                <h3 class="fs-5">Enjoy 10% off on combo meals every Friday!</h3>
+                <a href="./Menu.html" class="btn btn-dark-custom btn-lg mt-2 px-4 py-2"> Order Now </a>
             </div>
-            <div class="col-6 right-side">
-                <div class="Burger-box">
-                    <img src="/Assets/istockphoto-520410807-612x612.jpg" alt="Burger" class="burger-img">
+            <div class="col-md-6 text-center">
+                <img src="/Assets/istockphoto-520410807-612x612.jpg" alt="Delicious Burger" class="img-fluid rounded" />
+            </div>
+        </section>
+
+        <!-- Featured Burgers -->
+        <section class="mb-5">
+            <h2 class="mb-4 text-center">Featured Items</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img src="/Assets/Meals.jpg" alt="Spicy Chicken Burger" class="img-fluid rounded mb-2" />
+                    <a href="./Menu.html" class="btn order-now-btn btn-lg ms-2 mt-2">Meals</a>
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img src="/Assets/Sides.jpg" alt="Veggie Delight Burger" class="img-fluid rounded mb-2" />
+                    <a href="./Menu.html" class="btn order-now-btn btn-lg ms-2 mt-2">Sides</a>
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img src="/Assets/Drinks.jpg" Classic Beef Burger class="img-fluid rounded mb-2" />
+                    <a href="./Menu.html" class="btn order-now-btn btn-lg ms-2 mt-2">Drinks</a>
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img src="/Assets/Sweets.jpg" Classic Beef Burger class="img-fluid rounded mb-2" />
+                    <a href="./Menu.html" class="btn order-now-btn btn-lg ms-2 mt-2">Sweets</a>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="why-choose-us container">
+            <h2 class="fw-bold">Why Choose MOS Burgers?</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-6 col-md-3">
+                    <div class="burger-card h-100">
+                        <i class="fa-solid fa-leaf fa-3x mb-3 text-success"></i>
+                        <h5>Fresh Ingredients</h5>
+                        <p>Sourced daily for premium quality.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="burger-card h-100">
+                        <i class="fa-solid fa-fire fa-3x mb-3 text-danger"></i>
+                        <h5>Grilled to Perfection</h5>
+                        <p>Every burger is handmade & grilled fresh.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="burger-card h-100">
+                        <i class="fa-solid fa-seedling fa-3x mb-3 text-success"></i>
+                        <h5>Vegan Friendly</h5>
+                        <p>Wholesome options for all preferences.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="burger-card h-100">
+                        <i class="fa-solid fa-clock fa-3x mb-3 text-primary"></i>
+                        <h5>Fast Service</h5>
+                        <p>Quick, friendly, and reliable every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers -->
+        <section class="special-offers mb-5">
+            <div class="container text-center py-5">
+                <h2 class="mb-4 fw-bold text-dark">Special Offers</h2>
+                <p class="fs-5 mb-4 text-dark">Enjoy <strong>10% off</strong> on combo meals every
+                    <span class="text-primary">Friday</span>!
+                </p>
+                <p class="fs-6 text-muted mb-4">Join our loyalty program for more exclusive deals and rewards.</p>
+                <a href="./Menu.html" class="order-now-btn btn-lg mt-2 px-4 py-2">
+                    <i class="fa-solid fa-burger me-2"></i>Order Now
+                </a>
+            </div>
+        </section>
 
 
 
+        <section class="container mb-5 featured-burgers">
+            <h2 class="fw-bold">Customer Reviews</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="burger-card">
+                        <p class="fst-italic">“The best burger I’ve had in years! Fresh, juicy, and perfectly grilled.”
+                        </p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="" class="rounded-circle me-3" width="50" height="50" alt="User 1" />
+                            <div>
+                                <h6 class="mb-0 text-dark">Alex Fernando</h6>
+                                <small class="text-muted">Food Blogger</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="burger-card">
+                        <p class="fst-italic">“Love the veggie options! It’s hard to find such tasty vegan burgers.”</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="" class="rounded-circle me-3" width="50" height="50" alt="User 2" />
+                            <div>
+                                <h6 class="mb-0 text-dark">Nimali Perera</h6>
+                                <small class="text-muted">Vegetarian Foodie</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="burger-card">
+                        <p class="fst-italic">“Quick service, friendly staff, and mouth-watering burgers. Highly
+                            recommend!”</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="" class="rounded-circle me-3" width="50" height="50" alt="User 3" />
+                            <div>
+                                <h6 class="mb-0 text-dark">Ruwan Silva</h6>
+                                <small class="text-muted">Regular Customer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
