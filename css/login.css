@@ -75,6 +75,10 @@ body {
     background-color: #555;
     color: #fff;
 }
+#loginAlert {
+    transition: all 0.3s ease-in-out;
+}
+
 
 /* Optional: Style links */
 .login-link {
