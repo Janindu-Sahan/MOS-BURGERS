@@ -5,59 +5,84 @@ body {
     padding: 0;
     height: 100vh;
 }
+
 /* Navigation */
 .navbar {
-    padding: 1rem 0;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  padding: 1rem 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-brand img {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .navbar-brand span {
-    font-size: 1.7rem;
-    color: #222;
-    letter-spacing: 2px;
+  font-size: 1.7rem;
+  color: #222;
+  letter-spacing: 2px;
 }
 
 .nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  gap: 2rem;
+  margin-right: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-link {
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: color 0.2s;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
 
-.nav-link:hover, .nav-link.active {
-    background: #333;
-    color: #fff;
+.nav-link:hover,
+.nav-link.active {
+  background: #333;
+  color: #fff;
 }
 
-/* Main Content */
+
+/* Login Icon Button */
+.login-icon-btn {
+  border: 1px solid #333;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: transparent;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.login-icon-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.login-icon-btn::after {
+  content: 'Login';
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.login-icon-btn:hover::after {
+  opacity: 1;
+}
 
 .main-container {
     height: calc(100vh - 60px);
@@ -79,8 +104,6 @@ body {
     padding: 0 1rem;
 }
 
-/* Order Section */
-
 .order-section {
     background: white;
     border-radius: 15px;
@@ -94,15 +117,11 @@ body {
     overflow-y: auto;
 }
 
-/* Selected Items */
-
 #selectedItems {
     overflow-y: auto;
     max-height: 40vh;
     margin-bottom: 1rem;
 }
-
-/* Category */
 
 .category-btn {
     border: none;
@@ -123,9 +142,6 @@ body {
     background-color: #e9ecef;
 }
 
-/* Menu */
-
-
 .menu-item {
     cursor: pointer;
     transition: transform 0.2s;
@@ -142,7 +158,6 @@ body {
     border-radius: 10px;
 }
 
-/* Search Bar */
 .search-bar {
     border: 2px solid #e9ecef;
     border-radius: 10px;
@@ -151,8 +166,6 @@ body {
 .search-bar:focus {
     border-color: #ffc107;
 }
-
-/* Customer */
 
 .customer-input {
     border: 2px solid #e9ecef;
@@ -163,7 +176,6 @@ body {
     border-color: #ffc107;
 }
 
-/* Checkout Button */
 .checkout-btn {
     width: 100%;
     padding: 12px;
@@ -176,4 +188,53 @@ body {
 
 .checkout-btn:hover {
     background: #ffb300;
+}
+
+/* Customize scrollbar */
+#menuItems::-webkit-scrollbar,
+#selectedItems::-webkit-scrollbar {
+    width: 6px;
+}
+
+#menuItems::-webkit-scrollbar-thumb,
+#selectedItems::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+#menuItems::-webkit-scrollbar-track,
+#selectedItems::-webkit-scrollbar-track {
+    background-color: #f8f9fa;
+}
+
+.customer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.customer-modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.customer-info-icon {
+    cursor: pointer;
+    color: #ffc107;
+    margin-left: 0.5rem;
+}
+
+.customer-info-icon:hover {
+    color: #e0a800;
 }

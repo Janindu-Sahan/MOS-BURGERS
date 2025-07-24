@@ -99,7 +99,8 @@ body {
   transition: background-color 0.3s, color 0.3s;
   border-radius: 50px;
   padding: 0.6rem 1.5rem;
-  margin-top: 1.5rem;
+  text-decoration: none;
+  /* Add this line */
 }
 
 .order-now-btn:hover {

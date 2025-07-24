@@ -5,7 +5,7 @@ body {
     position: relative;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #fff;
-      background: url('/Assets/Banner.png') center/cover no-repeat;
+    background: url('/Assets/Banner.png') center/cover no-repeat;
 }
 
 .background-overlay {
@@ -14,11 +14,49 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-                url('../IMG/Banner.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url('../IMG/Banner.png') center/cover no-repeat;
     z-index: -1;
 }
+/* Navigation */
+.navbar {
+  padding: 1rem 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
+.navbar-brand img {
+  border-radius: 8px;
+}
+
+.navbar-brand span {
+  font-size: 1.7rem;
+  color: #222;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-right: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #333;
+  color: #fff;
+}
 /* Login Box */
 .login-container {
     min-height: 100vh;
@@ -31,7 +69,7 @@ body {
     background: #fff;
     padding: 2.5rem 2rem;
     border-radius: 20px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
     width: 350px;
     max-width: 90vw;
     display: flex;
@@ -75,6 +113,7 @@ body {
     background-color: #555;
     color: #fff;
 }
+
 #loginAlert {
     transition: all 0.3s ease-in-out;
 }
