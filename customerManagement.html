@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="CSS/customerManagement.css"> -->
+  <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
+  <title>MOS Burger - Customer Management</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/customerManagement.css">
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold text-dark d-flex align-items-center" href="index.html">
+        <i class="bi bi-shop text-warning fs-3 me-2"></i>
+        <span class="fs-4">MOS Burger</span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list fs-4 text-dark"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="/customerManagement.html">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="order.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="storeManagement.html">Store</a>
+          </li>
+        </ul>
+
+        <!-- User Actions -->
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-danger rounded-pill px-4" onclick="window.location.href='index.html'">
+            <i class="bi bi-box-arrow-left me-1"></i>Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <section class="header-gradient text-white py-3" style="margin-top: 71px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="fs-2 fw-bold mb-3 text-center">
+            <i class="bi bi-people-fill me-3"></i>
+            Customer Management
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card stats-card border-0 shadow rounded-4">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-people-fill text-primary fs-2 mb-2"></i>
+              <h3 class="fw-bold text-primary mb-1" id="totalCustomers">0</h3>
+              <p class="text-muted mb-0">Total Customers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card stats-card border-0 shadow rounded-4">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-person-plus-fill text-success fs-2 mb-2"></i>
+              <h3 class="fw-bold text-success mb-1">Today</h3>
+              <p class="text-muted mb-0">New Customers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card stats-card border-0 shadow rounded-4">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-star-fill text-warning fs-2 mb-2"></i>
+              <h3 class="fw-bold text-warning mb-1">5.0</h3>
+              <p class="text-muted mb-0">Avg Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Buttons Section -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card dashboard-card border-0 shadow-lg rounded-4">
+            <div class="card-body p-4">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <button onclick="addCustomer()" class="btn btn-gradient text-white w-100 py-3 rounded-3 fw-semibold">
+                    <i class="bi bi-person-plus fs-5 me-2"></i>
+                    Add New Customer
+                  </button>
+                </div>
+                <div class="col-md-6">
+                  <button onclick="searchCustomer()" class="btn btn-outline-primary w-100 py-3 rounded-3 fw-semibold">
+                    <i class="bi bi-search fs-5 me-2"></i>
+                    Search Customer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer List Section -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card dashboard-card border-0 shadow-lg rounded-4">
+            <div class="card-header bg-transparent border-0 p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="fw-bold text-dark mb-0">
+                  <i class="bi bi-list-ul me-2"></i>
+                  Customer Directory
+                </h3>
+                <span class="badge bg-primary rounded-pill px-3 py-2" id="customerCount">0 Customers</span>
+              </div>
+            </div>
+            <div class="card-body ">
+              <!-- Empty State -->
+              <div id="emptyState" class="text-center ">
+                <div class="mb-4">
+                  <i class="bi bi-person-plus fs-2 opacity-50"></i>
+                </div>
+                <h4 class="text-muted mb-3">No Customers Yet</h4>
+                <p class="text-muted mb-4">Start building your customer base by adding your first customer.</p>
+                <button onclick="addCustomer()" class="btn btn-gradient text-white px-5 py-3 rounded-pill fw-semibold">
+                  <i class="bi bi-person-plus me-2"></i>
+                  Add First Customer
+                </button>
+              </div>
+
+              <!-- Customer Grid -->
+              <div id="customerDetails" class="row g-4">
+                <!-- Customer cards will be dynamically added here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-shop text-warning fs-3 me-2"></i>
+                        <h5 class="fw-bold mb-0">MOS Burger</h5>
+                    </div>
+                    <p class="text-white-50">Premium quality fast food management system</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-white-50 mb-2">Contact: +94 701 410 113</p>
+                    <p class="text-white-50 mb-2">Email: info@mosburger.com</p>
+                    <p class="text-white-50 small mb-0">© 2025 MOS Burger. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- JS -->
+  <script src="js/customerManagement.js"></script>
+
+  <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

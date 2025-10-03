@@ -5,48 +5,44 @@ body {
     padding: 0;
     height: 100vh;
 }
-
 /* Navigation */
 .navbar {
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-
+.navbar-custom {
+  z-index: 1030;
+  background: #fff;
+}
 .navbar-brand img {
   border-radius: 8px;
 }
-
 .navbar-brand span {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   color: #222;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
-
 .nav-links {
   display: flex;
   gap: 2rem;
   margin-right: 15px;
   flex-wrap: wrap;
 }
-
 .nav-link {
   color: #333;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   text-decoration: none;
   transition: color 0.2s;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 20px;
 }
-
 .nav-link:hover,
 .nav-link.active {
   background: #333;
   color: #fff;
 }
-
-
 /* Login Icon Button */
 .login-icon-btn {
   border: 1px solid #333;
@@ -57,12 +53,10 @@ body {
   transition: all 0.3s ease;
   position: relative;
 }
-
 .login-icon-btn:hover {
   background-color: #333;
   color: #fff;
 }
-
 .login-icon-btn::after {
   content: 'Login';
   position: absolute;
@@ -79,17 +73,14 @@ body {
   pointer-events: none;
   transition: opacity 0.3s;
 }
-
 .login-icon-btn:hover::after {
   opacity: 1;
 }
-
 .main-container {
     height: calc(100vh - 60px);
     padding: 1rem;
     overflow: hidden;
 }
-
 .menu-section {
     background: white;
     border-radius: 15px;
@@ -97,13 +88,11 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .menu-items-container {
     flex: 1;
     overflow-y: auto;
     padding: 0 1rem;
 }
-
 .order-section {
     background: white;
     border-radius: 15px;
@@ -111,18 +100,15 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .order-details-container {
     flex: 1;
     overflow-y: auto;
 }
-
 #selectedItems {
     overflow-y: auto;
     max-height: 40vh;
     margin-bottom: 1rem;
 }
-
 .category-btn {
     border: none;
     background: none;
@@ -132,50 +118,40 @@ body {
     color: #666;
     font-weight: 500;
 }
-
 .category-btn.active {
     background-color: #ffc107;
     color: #333;
 }
-
 .category-btn:hover {
     background-color: #e9ecef;
 }
-
 .menu-item {
     cursor: pointer;
     transition: transform 0.2s;
 }
-
 .menu-item:hover {
     transform: translateY(-2px);
 }
-
 .menu-item img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
 }
-
 .search-bar {
     border: 2px solid #e9ecef;
     border-radius: 10px;
 }
-
 .search-bar:focus {
     border-color: #ffc107;
 }
-
 .customer-input {
     border: 2px solid #e9ecef;
     border-radius: 8px;
 }
-
 .customer-input:focus {
     border-color: #ffc107;
 }
-
 .checkout-btn {
     width: 100%;
     padding: 12px;
@@ -185,28 +161,23 @@ body {
     font-weight: 600;
     margin-top: 1rem;
 }
-
 .checkout-btn:hover {
     background: #ffb300;
 }
-
 /* Customize scrollbar */
 #menuItems::-webkit-scrollbar,
 #selectedItems::-webkit-scrollbar {
     width: 6px;
 }
-
 #menuItems::-webkit-scrollbar-thumb,
 #selectedItems::-webkit-scrollbar-thumb {
     background-color: #ccc;
     border-radius: 3px;
 }
-
 #menuItems::-webkit-scrollbar-track,
 #selectedItems::-webkit-scrollbar-track {
     background-color: #f8f9fa;
 }
-
 .customer-modal {
     position: fixed;
     top: 0;
@@ -219,7 +190,6 @@ body {
     align-items: center;
     z-index: 1000;
 }
-
 .customer-modal-content {
     background-color: white;
     padding: 2rem;
@@ -228,13 +198,11 @@ body {
     max-width: 500px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .customer-info-icon {
     cursor: pointer;
     color: #ffc107;
     margin-left: 0.5rem;
 }
-
 .customer-info-icon:hover {
     color: #e0a800;
 }

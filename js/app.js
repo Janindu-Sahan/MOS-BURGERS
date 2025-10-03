@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alertBox.classList.remove('d-none');
 
             setTimeout(() => {
-                window.location.href = 'order.html';
+                window.location.href = 'index.html';
             }, 1000);
         } else {
             alertBox.className = 'alert alert-danger';
@@ -38,3 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+function navigateToPage(page) {
+  if (!page) return;
+  // Basic safety: ensure the page string ends with .html
+  if (!/\.html$/i.test(page)) {
+    page = page + '.html';
+  }
+  window.location.href = page;
+}

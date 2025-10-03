@@ -1,130 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MOS Burger</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Animate.css for simple entrance animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="./Assets/hOME AND LOGIN IMAGES/mos burger ai.jpg" type="image/jpeg" />
+
+  <link rel="icon" href="Assets/Images/mos burger ai.jpg" type="image/jpeg" />
 </head>
 
-<body>
+<body class="bg-light">
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-white">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap">
-      <div class="navbar-brand d-flex align-items-center">
-        <img src="/Assets/hOME AND LOGIN IMAGES/mos burger ai.jpg" alt="Logo" height="50" />
-        <span class="ms-2 fw-bold">MOS BURGER</span>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold text-dark d-flex align-items-center" href="index.html">
+        <i class="bi bi-shop text-warning fs-3 me-2"></i>
+        <span class="fs-4">MOS Burger</span>
+      </a>
 
-      <div class="d-flex align-items-center flex-wrap">
-        <div class="nav-links me-3 flex-wrap">
-          <a href="./index.html" class="nav-link d-inline-block active">Home</a>
-          <a href="./order.html" class="nav-link d-inline-block">Menu</a>
-          <a href="./About.html" class="nav-link d-inline-block">About</a>
-          <a href="./Contact.html" class="nav-link d-inline-block">Contact</a>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-4 text-dark"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-dark px-3" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- User Actions -->
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-danger rounded-pill px-4" onclick="window.location.href='login.html'">
+            <i class="bi bi-box-arrow-left me-1"></i>Logout
+          </button>
         </div>
-        <a href="/login.html" class="login-icon-btn">
-          <i class="fa-solid fa-user fa-lg" aria-label="Login Icon"></i>
-        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container my-5">
-    <!-- Hero Section -->
-    <section class="row align-items-center mb-5 hero-section">
-      <div class="col-md-6 left-side">
-        <h1 class="display-3 fw-bold title">Welcome to MOS Burgers</h1>
-        <h3 class="fs-5">Enjoy 10% off on combo meals every Friday!</h3><br>
-        <a href="/login.html" class="order-now-btn btn-lg mt-2 px-4 py-2">Order Now</a>
-      </div>
-      <div class="col-md-6 text-center right-side">
-        <img src="/Assets/hOME AND LOGIN IMAGES/istockphoto-520410807-612x612.jpg" alt="Delicious Burger" class="img-fluid rounded" />
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero-gradient d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Hero Content -->
+        <div class="col-lg-6 text-white">
+          <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInUp">
+            Welcome to <span class="text-warning">MOS Burger</span>
+          </h1>
+          <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+            Experience premium burgers and fast-food management that's simple and fast.
+          </p>
 
-    <!-- Featured Burgers -->
-    <section class="featured-burgers mb-5">
-      <h2 class="mb-4 text-center">Featured Items</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-sm-6 col-md-3 text-center">
-          <img src="/Assets/hOME AND LOGIN IMAGES/Meals.jpg" alt="Meals" class="img-fluid rounded mb-2" />
-          <a href="./order.html" class="btn order-now-btn btn-lg ms-2 mt-2">Meals</a>
-        </div>
-        <div class="col-sm-6 col-md-3 text-center">
-          <img src="/Assets/hOME AND LOGIN IMAGES/Sides.jpg" alt="Sides" class="img-fluid rounded mb-2" />
-          <a href="./order.html" class="btn order-now-btn btn-lg ms-2 mt-2">Sides</a>
-        </div>
-        <div class="col-sm-6 col-md-3 text-center">
-          <img src="/Assets/hOME AND LOGIN IMAGES/Drinks.jpg" alt="Drinks" class="img-fluid rounded mb-2" />
-          <a href="./order.html" class="btn order-now-btn btn-lg ms-2 mt-2">Drinks</a>
-        </div>
-        <div class="col-sm-6 col-md-3 text-center">
-          <img src="/Assets/hOME AND LOGIN IMAGES/Sweets.jpg" alt="Sweets" class="img-fluid rounded mb-2" />
-          <a href="./order.html" class="btn order-now-btn btn-lg ms-2 mt-2">Sweets</a>
-        </div>
-      </div>
-    </section>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <button onclick="navigateToPage('order.html')"
+              class="btn gradient-btn text-white px-5 py-3 rounded-pill fw-semibold border-0">
+              <i class="bi bi-cart-plus me-2"></i>Order Now
+            </button>
+            <button onclick="navigateToPage('customerManagement.html')"
+              class="btn btn-outline-light px-5 py-3 rounded-pill fw-semibold">
+              <i class="bi bi-people me-2"></i>Manage Customers
+            </button>
+          </div>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose-us container">
-      <h2 class="fw-bold">Why Choose MOS Burgers?</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-sm-6 col-md-3">
-          <div class="burger-card h-100">
-            <i class="fa-solid fa-leaf fa-3x mb-3 text-success"></i>
-            <h5>Fresh Ingredients</h5>
-            <p>Sourced daily for premium quality.</p>
+          <div class="row text-center text-white-50">
+            <div class="col-4">
+              <h3 class="fw-bold text-warning">50+</h3>
+              <p class="small mb-0">Menu Items</p>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-warning">1000+</h3>
+              <p class="small mb-0">Happy Customers</p>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-warning">24/7</h3>
+              <p class="small mb-0">Service</p>
+            </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="burger-card h-100">
-            <i class="fa-solid fa-fire fa-3x mb-3 text-danger"></i>
-            <h5>Grilled to Perfection</h5>
-            <p>Every burger is handmade & grilled fresh.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="burger-card h-100">
-            <i class="fa-solid fa-seedling fa-3x mb-3 text-success"></i>
-            <h5>Vegan Friendly</h5>
-            <p>Wholesome options for all preferences.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="burger-card h-100">
-            <i class="fa-solid fa-clock fa-3x mb-3 text-primary"></i>
-            <h5>Fast Service</h5>
-            <p>Quick, friendly, and reliable every time.</p>
+
+        <!-- Hero Illustration / Card -->
+        <div class="col-lg-6 text-center mt-5 mt-lg-0">
+          <div class="float-animation mx-auto">
+            <div class="glass-card rounded-4 p-4 d-inline-block text-center">
+              <i class="bi bi-shop display-1 text-warning mb-2"></i>
+              <h4 class="text-white fw-bold">Premium Quality</h4>
+              <p class="text-white-50 mb-0">Fresh ingredients, perfect taste</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Special Offers -->
-    <section class="special-offers mb-5">
-      <div class="container text-center py-5">
-        <h2 class="mb-4 fw-bold text-dark">Special Offers</h2>
-        <p class="fs-5 mb-4 text-dark">
-          Enjoy <strong>10% off</strong> on combo meals every <span class="text-primary">Friday</span>!
-        </p>
-        <p class="fs-6 text-muted mb-4">Join our loyalty program for more exclusive deals and rewards.</p>
-        <a href="./Menu.html" class="order-now-btn btn-lg mt-2 px-4 py-2">
-          <i class="fa-solid fa-burger me-2"></i>Order Now
-        </a>
+  <!-- Features Section -->
+  <section id="features" class="py-5 bg-white">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="display-5 fw-bold text-dark mb-3">System Features</h2>
+          <p class="lead text-muted">Comprehensive management system for your restaurant</p>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
+      <!-- Feature Cards -->
+      <div class="row g-4">
+        <!-- Place Order -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card h-100 border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card-body p-4 text-center">
+              <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                <i class="bi bi-cart-plus fs-1 text-warning"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Place Orders</h4>
+              <p class="text-muted mb-4">Easy ordering system with real-time menu browsing and cart
+                management.</p>
+              <button onclick="navigateToPage('order.html')"
+                class="btn gradient-btn text-white px-4 py-2 rounded-pill border-0">
+                Start Ordering
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Management -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card h-100 border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card-body p-4 text-center">
+              <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                <i class="bi bi-people fs-1 text-success"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Customer Management</h4>
+              <p class="text-muted mb-4">Manage customer information, search, edit, and maintain customer
+                database.</p>
+              <button onclick="navigateToPage('customerManagement.html')"
+                class="btn btn-success px-4 py-2 rounded-pill border-0">
+                Manage Customers
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store Management -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card h-100 border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card-body p-4 text-center">
+              <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                <i class="bi bi-shop fs-1 text-info"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Store Management</h4>
+              <p class="text-muted mb-4">Inventory management, item tracking, and administrative controls.
+              </p>
+              <button onclick="navigateToPage('storeManagement.html')"
+                class="btn btn-info px-4 py-2 rounded-pill border-0 text-white">
+                Manage Store
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="display-5 fw-bold text-dark mb-4">About MOS Burger</h2>
+          <p class="lead text-muted mb-4">
+            MOS Burger is a premium fast-food restaurant management system designed to streamline operations
+            and enhance customer experience.
+          </p>
+          <div class="row">
+            <div class="col-sm-6 mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                <span class="fw-semibold">Fresh Ingredients</span>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                <span class="fw-semibold">Fast Service</span>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                <span class="fw-semibold">Quality Assurance</span>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                <span class="fw-semibold">24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card border-0 shadow rounded-4 p-3">
+                <i class="bi bi-award-fill text-warning fs-1 mb-2"></i>
+                <h6 class="fw-bold">Premium Quality</h6>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card border-0 shadow rounded-4 p-3">
+                <i class="bi bi-lightning-fill text-primary fs-1 mb-2"></i>
+                <h6 class="fw-bold">Fast Delivery</h6>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card border-0 shadow rounded-4 p-3">
+                <i class="bi bi-heart-fill text-danger fs-1 mb-2"></i>
+                <h6 class="fw-bold">Customer Love</h6>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card border-0 shadow rounded-4 p-3">
+                <i class="bi bi-lock-fill text-success fs-1 mb-2"></i>
+                <h6 class="fw-bold">Secure System</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-shop text-warning fs-3 me-2"></i>
+            <h5 class="fw-bold mb-0">MOS Burger</h5>
+          </div>
+          <p class="text-white-50">Premium quality fast food management system</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-white-50 mb-2">Contact: +94 717 170 356</p>
+          <p class="text-white-50 mb-2">Email: info@mosburger.com</p>
+          <p class="text-white-50 small mb-0">© 2025 MOS Burger. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (placed before closing body) -->
+  <script src="./js/app.js"></script>
+  <script>
+    // Safe fallback in case app.js doesn't define this
+    window.navigateToPage = window.navigateToPage || function (url) {
+      window.location.href = url;
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
